@@ -75,7 +75,7 @@ def kalkulator():
             #file.write('liczba b:')
             #file.write(b)
             file.write('\n')
-            file.write('wynik' + str(c))
+            file.write('wynik=' + str(c))
             #file.write(str(c))
             file.write('\n')
         if polecenie_w_trybie_calc=='!':
