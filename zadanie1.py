@@ -1,4 +1,5 @@
 from kalkulator import kalkulator
+from przegladarka_plikow import przegladarka
 
 while 1:
     print("pętla główna")
@@ -12,5 +13,6 @@ while 1:
             kalkulator()
         case 'files':
             print('Przeglądarka plików')
+            przegladarka()
 
     

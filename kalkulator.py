@@ -5,6 +5,7 @@ def kalkulator():
         polecenie_w_trybie_calc=input()
         if polecenie_w_trybie_calc=="q":
             break
+
         if polecenie_w_trybie_calc=="+":
             print('podaj liczbę a')
             a=input()
@@ -13,17 +14,11 @@ def kalkulator():
             c=int(a)+int(b)
             print('wynik')
             print(c)
-            #file.write('dodawanie"+":\n')
             file.write('dodawanie: ' + a + " + " + b)
-            #file.write('liczba a: ' +a)
-            #file.write(a)
-            #file.write('\n')
-            #file.write('liczba b: ' +b)
-            #file.write(b)
             file.write('\n')
             file.write("wynik=" + str(c))
-            #file.write(str(c))
             file.write('\n')
+
         if polecenie_w_trybie_calc=='-':
             print('podaj liczbę a')
             a=input()
@@ -33,15 +28,10 @@ def kalkulator():
             print('wynik')
             print(c)
             file.write('odejmowanie:' + a + "-" + b)
-            #file.write('liczba a:')
-            #file.write(a)
-            #file.write('\n')
-            #file.write('liczba b:')
-            #file.write(b)
             file.write('\n')
             file.write('wynik=' + str(c))
-            #file.write(str(c))
             file.write('\n')
+
         if polecenie_w_trybie_calc=='*':
             print('podaj liczbę a')
             a=input()
@@ -51,15 +41,10 @@ def kalkulator():
             print('wynik')
             print(c)
             file.write('mnożenie:' + a + "*" +b)
-            #file.write('liczba a:')
-            #file.write(a)
-            ##file.write('\n')
-            #file.write('liczba b:')
-            #file.write(b)
             file.write('\n')
             file.write('wynik=' + str(c))
-            #file.write(str(c))
             file.write('\n')
+
         if polecenie_w_trybie_calc=='/':
             print('podaj liczbę a')
             a=input()
@@ -69,15 +54,10 @@ def kalkulator():
             print('wynik')
             print(c)
             file.write('dzielenie:' + a + "/" +b)
-            #file.write('liczba a:')
-            #file.write(a)
-            #file.write('\n')
-            #file.write('liczba b:')
-            #file.write(b)
             file.write('\n')
             file.write('wynik=' + str(c))
-            #file.write(str(c))
             file.write('\n')
+
         if polecenie_w_trybie_calc=='!':
             print('podaj liczbę n')
             n=int(input())
@@ -88,12 +68,10 @@ def kalkulator():
             print('wynik')
             print(fact)
             file.write("silnia:" + str(n) + "!")
-            #file.write("liczba n: ")
-            #file.write(str(n))
             file.write("\n")
             file.write('wynik=' + str(n))
-            #file.write(str(fact))
             file.write("\n")
+
         if polecenie_w_trybie_calc=='^':
             print('podaj liczbę a')
             a=input()
@@ -103,12 +81,6 @@ def kalkulator():
             print('wynik')
             print(c)
             file.write('potegowanie:' + a + '**' +b)
-            #file.write('liczba a:')
-            #file.write(a)
             file.write('\n')
-            #file.write('liczba b:')
-            #file.write(b)
-            #file.write('\n')
             file.write('wynik=' + str(c))
-            #file.write(str(c))
         file.close()
