@@ -1,17 +1,17 @@
 def kalkulator():
     while 1:
-        file=open('historia1234', 'a', encoding="utf-8")
+        file = open('historia1234', 'a', encoding="utf-8")
         print('pętla kalkulatora')
-        polecenie_w_trybie_calc=input()
-        if polecenie_w_trybie_calc=="q":
+        polecenie_w_trybie_calc = input()
+        if polecenie_w_trybie_calc == "q":
             break
 
-        elif polecenie_w_trybie_calc=="+":
+        elif polecenie_w_trybie_calc == "+":
             print('podaj liczbę a')
-            a=input()
+            a = input()
             print('podaj liczbę b')
-            b=input()
-            c=int(a)+int(b)
+            b = input()
+            c = int(a) + int(b)
             print('wynik')
             print(c)
             file.write('dodawanie: ' + a + " + " + b)
@@ -19,12 +19,12 @@ def kalkulator():
             file.write("wynik=" + str(c))
             file.write('\n')
 
-        elif polecenie_w_trybie_calc=='-':
+        elif polecenie_w_trybie_calc == '-':
             print('podaj liczbę a')
-            a=input()
+            a = input()
             print('podaj liczbę b')
-            b=input()
-            c=int(a)-int(b)
+            b = input()
+            c = int(a) - int(b)
             print('wynik')
             print(c)
             file.write('odejmowanie:' + a + "-" + b)
@@ -32,42 +32,42 @@ def kalkulator():
             file.write('wynik=' + str(c))
             file.write('\n')
 
-        elif polecenie_w_trybie_calc=='*':
+        elif polecenie_w_trybie_calc == '*':
             print('podaj liczbę a')
-            a=input()
+            a = input()
             print('podaj liczbę b')
-            b=input()
-            c=int(a)*int(b)
+            b = input()
+            c = int(a) * int(b)
             print('wynik')
             print(c)
-            file.write('mnożenie:' + a + "*" +b)
+            file.write('mnożenie:' + a + "*" + b)
             file.write('\n')
             file.write('wynik=' + str(c))
             file.write('\n')
 
-        elif polecenie_w_trybie_calc=='/':
+        elif polecenie_w_trybie_calc == '/':
             print('podaj liczbę a')
-            a=input()
+            a = input()
             print('podaj liczbę b')
-            b=input()
+            b = input()
             try:
-                c=int(a)/int(b)
+                c = int(a) / int(b)
                 print('wynik')
                 print(c)
-                file.write('dzielenie:' + a + "/" +b)
+                file.write('dzielenie:' + a + "/" + b)
                 file.write('\n')
                 file.write('wynik=' + str(c))
                 file.write('\n')
-    
+
             except ZeroDivisionError:
                 print("Nie można podzielić przez 0!")
 
-        elif polecenie_w_trybie_calc=='!':
+        elif polecenie_w_trybie_calc == '!':
             print('podaj liczbę n')
-            n=int(input())
-            if n>0:    
-                fact=1
-                for i in range(1, n+1):
+            n = int(input())
+            if n > 0:
+                fact = 1
+                for i in range(1, n + 1):
                     print(fact)
                     fact = fact * i
                 print('wynik')
@@ -79,17 +79,18 @@ def kalkulator():
             else:
                 print('Silnia możliwa tylko od liczb >0')
 
-        elif polecenie_w_trybie_calc=='^':
+        elif polecenie_w_trybie_calc == '^':
             print('podaj liczbę a')
-            a=input()
+            a = input()
             print('podaj liczbę b')
-            b=input()
-            c=int(a)**int(b)
+            b = input()
+            c = int(a) ** int(b)
             print('wynik')
             print(c)
-            file.write('potegowanie:' + a + '^' +b)
+            file.write('potegowanie:' + a + '^' + b)
             file.write('\n')
             file.write('wynik=' + str(c))
         else:
-            print('Podano nieprawidłowe operacje, możliwe operacje: +, -, *, /, ^, !, q-do wyjścia ')
+            print('Podano nieprawidłowe operacje, ')
+            print('możliwe operacje: +, -, *, /, ^, !, q-do wyjścia ')
         file.close()
